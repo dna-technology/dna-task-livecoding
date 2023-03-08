@@ -11,7 +11,7 @@ Let's imagine that during the team discussion you agreed on the final solution f
 - Apps can inform the server about a new infection.
 
 ## Task 1
-Add new endpoint to fetch the list of infected people only from the past 2 weeks. The period from which to fetch the list should be provided by the Apps.
+Add new endpoint to fetch the list of infected people. The period from which to fetch the list should be provided by the Apps.
 
 ## Task 2
 Implement caching in the backend for the existing endpoint. Please don't use any libraries to achieve it, just plain Java.
