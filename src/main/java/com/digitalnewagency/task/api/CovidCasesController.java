@@ -1,7 +1,6 @@
 package com.digitalnewagency.task.api;
 
-import com.digitalnewagency.task.service.CaseService;
-import org.springframework.http.MediaType;
+import com.digitalnewagency.task.service.CovidCaseService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,17 +11,17 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 
 @RestController
 @RequestMapping("/cases")
-public class CaseController {
+public class CovidCasesController {
 
-    private final CaseService caseService;
+    private final CovidCaseService caseService;
 
-    public CaseController(CaseService caseService) {
+    public CovidCasesController(CovidCaseService caseService) {
         this.caseService = caseService;
     }
 
     @ResponseStatus(NO_CONTENT)
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    void addCase(@RequestBody CaseDto caseDto) {
+    @PostMapping
+    void addCase(@RequestBody CovidCaseDto caseDto) {
         caseService.addCase(caseDto);
     }
 

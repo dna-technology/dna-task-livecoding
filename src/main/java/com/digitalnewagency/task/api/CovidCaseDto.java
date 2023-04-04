@@ -1,6 +1,6 @@
 package com.digitalnewagency.task.api;
 
-public class CaseDto {
+public class CovidCaseDto {
 
     private String userId;
     private String latitude;

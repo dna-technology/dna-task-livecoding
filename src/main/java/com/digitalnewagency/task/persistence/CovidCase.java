@@ -8,20 +8,14 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "cases")
-public class Case {
+@Table(name = "covid_cases")
+public class CovidCase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
     private String userId;
-
-    @NotNull
-    private Double latitude;
-
-    @NotNull
-    private Double longitude;
 
     public Long getId() {
         return id;
@@ -33,21 +27,5 @@ public class Case {
 
     public void setUserId(String userId) {
         this.userId = userId;
-    }
-
-    public Double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
-
-    public Double getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(Double longitude) {
-        this.longitude = longitude;
     }
 }
