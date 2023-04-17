@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.io.IOException;
 import java.net.URI;
@@ -19,6 +20,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class CovidCaseControllerTest {
 
@@ -34,9 +36,7 @@ class CovidCaseControllerTest {
 		// when
 		String casePayload = """
 			{
-				"userId": "0720f0d6-0e82-4be5-98f0-72c2c9f229a6",
-				"latitude": "43.969005",
-				"longitude": "32.735005"
+				"userId": "0720f0d6-0e82-4be5-98f0-72c2c9f229a6"
 			}
 			""";
 
